@@ -1,0 +1,27 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <dl class="dl-horizontal">
+        <dt>
+            <input asp-for="Name" class="form-control" placeholder="Name" readonly />
+            <span asp-validation-for="Name"></span>
+        </dt>
+        <dd></dd>
+        <dt>
+            <input asp-for="Description" class="form-control" placeholder="Name" readonly />
+            <span asp-validation-for="Description"></span>
+        </dt>
+        <dd>تصویر</dd>
+        <dt>
+            <img src="/images/@(Model.Id).jpg" style="max-width: 200px" />
+        </dt>
+        <dd></dd>
+        <dt>
+            <input type="submit" class="btn form-control shadow bg-transparent" value="حذف" />
+        </dt>
+    </dl>
+</form>

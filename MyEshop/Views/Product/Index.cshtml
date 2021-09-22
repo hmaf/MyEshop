@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Product>
+
+@{ 
+    ViewData["Title"] = ViewData["title"];
+}
+
+<h1>به صفحه @ViewData["title"]</h1>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <partial name="_BoxProduct" model="@item" />
+    }
+</div>

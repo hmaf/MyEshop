@@ -1,0 +1,47 @@
+﻿@model AddEditProductViewModel
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>بروزرسانی</h1>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <input asp-for="Id" type="hidden"/>
+               
+          
+            <div class="form-group">
+                
+                <input asp-for="Name" class="form-control" placeholder="نام"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               
+                <input asp-for="Description" class="form-control" placeholder="توضیحات"/>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <input asp-for="Price" class="form-control" placeholder="قیمت"/>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <input asp-for="QuantityInStock" class="form-control" placeholder="تعداد"/>
+                <span asp-validation-for="QuantityInStock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label >تصویر</label>
+                <input asp-for="piture" class="input-group-btn" />
+                <span asp-validation-for="piture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="ثبت" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
